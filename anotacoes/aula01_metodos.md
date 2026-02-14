@@ -1,14 +1,21 @@
-Aula 01 – Métodos em Java
+📘 Aula 01 – Métodos em Java
 🎯 Objetivo da Aula
 
-Aprender a organizar código usando métodos, entender retorno, parâmetros e escopo.
+Aprender a organizar código usando métodos, entender:
+
+Retorno
+
+Parâmetros
+
+Escopo
+
+Organização de responsabilidades
 
 📌 1️⃣ O que é um método?
 
 Um método é um bloco de código que executa uma tarefa específica.
 
 Estrutura básica:
-
 public static void nomeMetodo() {
     // código
 }
@@ -18,7 +25,6 @@ public static void nomeMetodo() {
 Um método void não retorna valor.
 
 Exemplo:
-
 public static void mostrarNome(String nome) {
     System.out.println(nome);
 }
@@ -28,15 +34,14 @@ public static void mostrarNome(String nome) {
 Quando o método precisa devolver um valor, usamos um tipo diferente de void.
 
 Exemplo:
-
 public static int mostrarIdade() {
     return 23;
 }
 
 
-Se o método tem tipo diferente de void, o return é obrigatório.
+⚠️ Se o método tem tipo diferente de void, o return é obrigatório.
 
-Se não houver return, ocorre erro:
+Se não houver return, ocorre erro de compilação:
 
 missing return statement
 
@@ -45,7 +50,6 @@ missing return statement
 Variáveis existem apenas dentro do bloco onde foram declaradas.
 
 Exemplo:
-
 public static int exemplo() {
     int numero = 10;
     return numero;
@@ -54,21 +58,18 @@ public static int exemplo() {
 
 A variável numero só existe dentro desse método.
 
-Mesmo nome de variável pode ser usado em métodos diferentes sem conflito.
+✔ Mesmo nome de variável pode ser usado em métodos diferentes sem conflito.
 
 📌 5️⃣ Métodos com parâmetros
 
 Parâmetros permitem que o método receba dados externos.
 
 Exemplo:
-
 public static void mostrarIdade(int idade) {
     System.out.println("Idade: " + idade + " anos");
 }
 
-
 Chamando no main:
-
 mostrarIdade(23);
 
 📌 6️⃣ Integração com Scanner
@@ -76,7 +77,6 @@ mostrarIdade(23);
 Entrada de dados deve ficar no main.
 
 Exemplo:
-
 Scanner scanner = new Scanner(System.in);
 
 System.out.print("Digite seu nome: ");
@@ -93,11 +93,13 @@ scanner.close();
 
 📌 7️⃣ Separação de responsabilidades
 
-Boa prática:
+Boa prática profissional:
 
-main → controla fluxo e entrada
+main → controla fluxo e entrada de dados
 
 Métodos → executam tarefas específicas
+
+Isso deixa o código organizado e reutilizável.
 
 💡 Código Final da Aula
 import java.util.Scanner;
@@ -141,12 +143,14 @@ Métodos void
 
 Métodos com retorno
 
-Uso de return
+Uso obrigatório de return
 
-Escopo
+Escopo de variáveis
 
 Parâmetros
 
-Scanner integrado com métodos
+Integração com Scanner
 
 Organização de código
+
+Separação de responsabilidades
