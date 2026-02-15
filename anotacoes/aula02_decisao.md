@@ -39,9 +39,9 @@ Principais operadores:
 != diferente
 
 Exemplo:
-
+````
 return idade >= 18;
-
+````
 
 A expressão acima já retorna true ou false.
 
@@ -50,43 +50,43 @@ A expressão acima já retorna true ou false.
 Permite executar blocos diferentes dependendo da condição.
 
 Estrutura básica:
-
+````
 if (condicao) {
     // executa se for true
 } else {
     // executa se for false
 }
-
+````
 
 Exemplo:
-
+````
 if (idade >= 18) {
     System.out.println("Você é maior de idade.");
 } else {
     System.out.println("Você é menor de idade.");
 }
-
+````
 📌 4️⃣ Método retornando boolean
 
 Podemos criar métodos que devolvem true ou false.
 
 Exemplo:
-
+````
 public static boolean podeDirigir(int idade) {
     return idade >= 18;
 }
-
+````
 
 Chamando no main:
-
+````
 boolean temPermissaoParaDirigir = podeDirigir(idade);
-
+````
 📌 5️⃣ Múltiplas Regras Independentes
 
 Boa prática: criar métodos separados para cada regra.
 
 Exemplo:
-
+````
 public static boolean podeDirigir(int idade) {
     return idade >= 18;
 }
@@ -94,7 +94,7 @@ public static boolean podeDirigir(int idade) {
 public static boolean podeBeber(int idade) {
     return idade >= 21;
 }
-
+````
 
 Isso permite:
 
@@ -107,7 +107,7 @@ Facilidade para adicionar novas regras futuramente
 📌 6️⃣ Organização com if independentes
 
 Quando as regras são independentes, podemos usar if separados:
-
+````
 if (podeDirigir) {
     System.out.println("Pode dirigir.");
 }
@@ -115,7 +115,7 @@ if (podeDirigir) {
 if (podeBeber) {
     System.out.println("Pode beber.");
 }
-
+````
 
 Esse modelo facilita escalabilidade.
 
@@ -124,7 +124,7 @@ Esse modelo facilita escalabilidade.
 Use else if quando as condições forem excludentes.
 
 Exemplo:
-
+````
 if (podeBeber) {
     System.out.println("Pode dirigir e beber.");
 } else if (podeDirigir) {
@@ -132,7 +132,7 @@ if (podeBeber) {
 } else {
     System.out.println("Não pode dirigir nem beber.");
 }
-
+````
 
 Nesse caso apenas uma mensagem será exibida.
 
@@ -145,7 +145,7 @@ main → controla fluxo e entrada de dados
 Métodos → contêm regras de negócio
 
 💡 Código Final da Aula
-
+````
 import java.util.Scanner;
 
 public class Main {
@@ -182,7 +182,7 @@ public class Main {
         return idade >= 21;
     }
 }
-
+````
 🚀 Conclusão
 
 Nesta aula aprendemos:
